@@ -33,6 +33,13 @@ public class MotoInventoryController {
         return motorcycle;
     }
 
+    @RequestMapping(value = "/motorcycles", method = RequestMethod.GET)
+    @ResponseStatus(value = HttpStatus.FOUND)
+    public List<Motorcycle> getAllMotorcycles(){
+        List<Motorcycle> motoList = motoInventoryDao.getAllMotorcycles();
+        return motoList;
+    }
+
     @RequestMapping(value = "/motorcycles/{motoId}", method = RequestMethod.GET)
     @ResponseStatus(value = HttpStatus.OK)
     public Motorcycle getMotorcycle(@PathVariable int motoId) {
