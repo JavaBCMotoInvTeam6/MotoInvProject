@@ -64,6 +64,13 @@ public class MotoInventoryController {
 
     }
 
+    @RequestMapping(value = "/motorcycles/make/{make}")
+    @ResponseStatus(HttpStatus.FOUND)
+    public List<Motorcycle> getMotorcycleByMake(@PathVariable String make){
+        List<Motorcycle> motoList = motoInventoryDao.getMotorcyclesByMake(make);
+        return motoList;
+    }
+
     @Autowired
     private DiscoveryClient discoveryClient;
 
