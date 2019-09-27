@@ -11,18 +11,18 @@ public class Motorcycle {
     @Size(min = 5, max = 20, message = "VIN must be 20 characters in length.")
     private String vin;
     @NotEmpty(message = "You must supply a value for make.")
-    @Size(min = 5, max = 20, message = "make must be 5 to 20 characters";)
+    @Size(min = 5, max = 20, message = "make must be 5 to 20 characters")
     private String make;
 
     @NotEmpty(message = "You must supply a value for model.")
-    @Size(min = 5, max = 20, message = "model must be 5 to 20 characters";)
+    @Size(min = 5, max = 20, message = "model must be 5 to 20 characters")
     private String model;
 
     @NotEmpty(message = "You must supply a value for year.")
     @Size(min = 4, max = 4, message = "Year must be 4 digits.")
     private String year;
     @NotEmpty(message = "You must supply a value for color.")
-    @Size(min = 5, max = 20, message = "make must be 5 to 20 characters";)
+    @Size(min = 5, max = 20, message = "make must be 5 to 20 characters")
     private String color;
 
     public int getId() {
