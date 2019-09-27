@@ -22,7 +22,7 @@ public class Motorcycle {
     @Size(min = 4, max = 4, message = "Year must be 4 digits.")
     private String year;
     @NotEmpty(message = "You must supply a value for color.")
-    @Size(min = 5, max = 20, message = "make must be 5 to 20 characters")
+    @Size(max = 20, message = "color can by up to 20 characters")
     private String color;
 
     public int getId() {
